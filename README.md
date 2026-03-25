@@ -101,3 +101,7 @@ php artisan serve
 | Werkervaring | Period, company, description (NL+EN), URL, tech stack, order |
 | Vaardigheden | Category (NL+EN), items (pipe-separated), order |
 | Educatie | Title (NL+EN), institution, period, learned (NL+EN), order |
+<<<<<<< HEAD
+=======
+# cvjelletraa
+>>>>>>> fe2476398bbac801ffbe737fe9427605e10da3fa
