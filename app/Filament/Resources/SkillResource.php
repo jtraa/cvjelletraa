@@ -8,25 +8,18 @@ use Filament\Actions\DeleteAction;
 use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\EditAction;
-<<<<<<< HEAD
 use Filament\Actions\ForceDeleteAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreAction;
 use Filament\Actions\RestoreBulkAction;
-=======
->>>>>>> fe2476398bbac801ffbe737fe9427605e10da3fa
 use Filament\Forms\Components\TextInput;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Tables;
-<<<<<<< HEAD
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-=======
-use Filament\Tables\Table;
->>>>>>> fe2476398bbac801ffbe737fe9427605e10da3fa
 
 class SkillResource extends Resource
 {
@@ -57,7 +50,6 @@ class SkillResource extends Resource
                 Tables\Columns\TextColumn::make('sort_order')->label('#')->sortable(),
                 Tables\Columns\TextColumn::make('category_nl')->label('Categorie'),
                 Tables\Columns\TextColumn::make('items')->label('Items')->limit(50),
-<<<<<<< HEAD
                 Tables\Columns\TextColumn::make('deleted_at')->label('Verwijderd op')->dateTime()->toggleable(isToggledHiddenByDefault: true),
             ])
             ->defaultSort('sort_order')
@@ -75,29 +67,15 @@ class SkillResource extends Resource
                     RestoreBulkAction::make(),
                     DeleteBulkAction::make(),
                     ForceDeleteBulkAction::make(),
-=======
-            ])
-            ->defaultSort('sort_order')
-            ->actions([
-                EditAction::make(),
-                DeleteAction::make(),
-            ])
-            ->bulkActions([
-                BulkActionGroup::make([
-                    DeleteBulkAction::make(),
->>>>>>> fe2476398bbac801ffbe737fe9427605e10da3fa
                 ]),
             ]);
     }
 
-<<<<<<< HEAD
     public static function getEloquentQuery(): Builder
     {
         return parent::getEloquentQuery()->withoutGlobalScope(SoftDeletingScope::class);
     }
 
-=======
->>>>>>> fe2476398bbac801ffbe737fe9427605e10da3fa
     public static function getPages(): array
     {
         return [
